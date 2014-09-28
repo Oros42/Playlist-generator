@@ -13,7 +13,7 @@ ini_set('user_agent', 'Mozilla/5.0 (Playlist generator; https://github.com/Oros4
 if(!is_file("config.php")){
 	@file_put_contents('config.php', '<?php
 	// authorized file types (4 char)
-	$TYPES = array(".mp3", ".ogg", ".wav", ".mp4", ".avi", "mkv");
+	$TYPES = array(".mp3", ".ogg", ".wav", ".mp4", ".avi", "mkv", "flac", "wma");
 
 	// URI of musics\' folders
 	// can be a local path or a URL
