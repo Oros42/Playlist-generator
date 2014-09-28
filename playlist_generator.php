@@ -21,7 +21,11 @@ if(!is_file("config.php")){
 	$URIs = array(
 		"."
 		//,"./musics"
-		//,"http://exemple.com/music/"
+		//,"./path1/path2/musics"
+		//,"http://example.com/music/"
+        	//,"http://example.com/somewhere/zic/"
+        	//,"http://123.123.123.123/"
+        	//,"http://127.0.0.1/"
 	);
 
 	// scan subfolder level recursive
