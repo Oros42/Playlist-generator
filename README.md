@@ -10,7 +10,7 @@ Generate m3u playlist with list of local paths and URLs
 4- You can add paths and URLs in $URIs variable.  
   
   
-You can find web page with musics file by using http://www.keewa.net/ or by recherching on google :  
+You can find web pages with musics files by using http://www.keewa.net/ or by searching on google :  
 ```
 intext:*.mp3 intitle:"index of" -inurl:"index" -inurl:"html" -inurl:"php" -inurl:"asp" "name" "last modified" "size"
 ```
