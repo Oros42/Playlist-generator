@@ -84,7 +84,7 @@ function scan_url($URI, $TYPES, $level=0){
 	$page=file_get_contents($URI);
 	if(!empty($page)){
 		if(strpos($page, "<title>Index of")!==false){
-			$regexp = "alt=\"\[([A-Z]+)\]\".*href=\"([^\" >]*?)\"";
+			$regexp = "href=\"([^\" >]*?)\"";
 			if(preg_match_all("/$regexp/siU", $page, $matches)) {
 				if(substr($URI,-1)=='/'){
 					$uri=substr($URI,0,-1);
@@ -129,7 +129,7 @@ if(!empty($URIs)) {
 					}
 					foreach ($musics as $music) {
 						$playlist.="#EXTINF:-1,".urldecode($music[1])." ( ".$music[0]."/".$music[1]." )\n";
-						$playlist.=$music[0]."/".$music[1]."\n";
+						$playlist.=str_replace(array("%2F", "%3A"),array("/", ":"),rawurlencode($music[0]."/".$music[1]))."\n";
 					}
 				}
 				@file_put_contents("playlist.m3u", $playlist) or die("Can't create playlist.m3u file. Please check permissions.");
